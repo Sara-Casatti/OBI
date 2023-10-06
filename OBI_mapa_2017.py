@@ -24,6 +24,5 @@ elif comeco[1] - 1 > 1 and lista[comeco[0]][comeco[1] + 1] == "H":
     
 elif  and lista[comeco[0] - 1][comeco[1]] == "H":
     comeco = (comeco[0] - 1, comeco[1]) 
-elif  and lista[comeco[0] + 1][comeco[1]] == "H":
-    comeco = (comeco[0] + 1, comeco[1])
+
 '''
