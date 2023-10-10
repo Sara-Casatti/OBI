@@ -15,14 +15,25 @@ for cont in range(linhas):
 print(comeco)
 lista_p.append(comeco)
 
+while not flag:
+    if comeco[1] + 1 < colunas and lista[comeco[0]][comeco[1] + 1] == "H" and (comeco[0], comeco[1] + 1) not in lista_p:
+        comeco = (comeco[0], comeco[1] + 1)
+        print("1", comeco)
+        lista_p.append(comeco)
+    elif comeco[1] - 1 >= 0 and lista[comeco[0]][comeco[1] - 1] == "H" and (comeco[0], comeco[1] - 1) not in lista_p:
+        comeco = (comeco[0], comeco[1] - 1)
+        print("2", comeco)
+        lista_p.append(comeco)
+    elif comeco[0] + 1 < linhas and lista[comeco[0] + 1][comeco[1]] == "H" and (comeco[0] + 1, comeco[1]) not in lista_p:
+        comeco = (comeco[0] + 1, comeco[1])
+        print("3", comeco)
+        lista_p.append(comeco)
+    elif comeco[0] - 1 >= 0 and lista[comeco[0] - 1][comeco[1]] == "H" and (comeco[0] - 1, comeco[1]) not in lista_p:
+        comeco = (comeco[0] - 1, comeco[1])
+        print("4", comeco)
+        lista_p.append(comeco)
+    else:
+        flag = True
 
-'''       
-if comeco[1] - 1 > 1 and lista[comeco[0]][comeco[1] - 1] == "H":
-    comeco = (comeco[0], comeco[1] - 1)
-elif comeco[1] - 1 > 1 and lista[comeco[0]][comeco[1] + 1] == "H":
-    comeco = (comeco[0], comeco[1] + 1) 
-    
-elif  and lista[comeco[0] - 1][comeco[1]] == "H":
-    comeco = (comeco[0] - 1, comeco[1]) 
+print(comeco[0] + 1, comeco[1]+1)
 
-'''
